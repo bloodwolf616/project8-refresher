@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace project8_refresher_
 {
-    class Bird
+    class Bird : IBird
     {
 
         private static readonly Random _random = new Random();
