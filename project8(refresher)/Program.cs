@@ -10,16 +10,20 @@ namespace project8_refresher_
     {
         static void Main(string[] args)
         {
-            
-            int number1 = 10;
-            number1 += 10;
-            Console.WriteLine(number1);
-            Console.WriteLine(add(10, 15));
-            askMathQuestion(256, 567);
 
-            Bird robin = new Bird("red", "robin");
-            Console.WriteLine(robin.Species);
-            
+
+            Bird[] birds = new Bird[] 
+            {
+                 new Bird("red", "robin"),
+                  new Bird("white", "Owl"),
+                   new Bird("blue", "Osprey")
+
+            };
+
+            Bird sparrow = new Bird("red", "sparrow");
+            Bird sparrow2 = new Bird("red", "sparrow");
+            Bird owl = new Bird("grey", "Owl");
+            Console.WriteLine(sparrow.GetHashCode());
             
             Console.ReadLine();
         }
@@ -36,7 +40,8 @@ namespace project8_refresher_
              
                     string guess = Console.ReadLine();
                     answerAsInt = int.Parse(guess);
-                    if (correctAnswer == answerAsInt)
+                
+                if (correctAnswer == answerAsInt)
                     {
                         Console.WriteLine("Correct answer. good job. Press any key to exit");
                         break;
